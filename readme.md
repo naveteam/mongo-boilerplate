@@ -10,6 +10,7 @@ A boilerplate for building RESTful APIs using Node.js, PostgreSQL, koa, knex, ob
 2. Install MongoDB community
 3. Clone this repository and enter on the respective folder
 4. Install dependencies running: `yarn` or `npm install`
+
 ## Testing
 
 1. Run tests: `yarn test`

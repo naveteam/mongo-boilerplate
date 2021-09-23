@@ -52,7 +52,12 @@ export const index = async ctx => {
 
   return User.paginate(
     {},
-    { offset, limit, customLabels, sort: { [sort]: orderBy === 'asc' ? 1 : -1 } }
+    {
+      offset,
+      limit,
+      customLabels,
+      sort: { [sort]: orderBy === 'asc' ? 1 : -1 }
+    }
   )
 }
 
@@ -89,7 +94,7 @@ export const reset = async ctx => {
     },
     {
       password: newPassword,
-      password_reset_token: null,
+      password_reset_token: null
     }
   )
 
@@ -100,13 +105,11 @@ export const reset = async ctx => {
   return user
 }
 
-export const show = ctx =>
-  User.findOne({ id: ctx.params.id })
-    .populate('role')
+export const show = ctx => User.findOne({ id: ctx.params.id }).populate('role')
 
 export const create = async ctx => {
   const { body } = ctx.request
-return User.create({
+  return User.create({
     name: body.name,
     password: await encryptPassword(body.password),
     email: body.email,

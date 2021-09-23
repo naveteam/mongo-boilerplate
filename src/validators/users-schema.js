@@ -32,7 +32,7 @@ const UsersValidate = {
         password: Joi.string().min(6).max(100).optional(),
         role: Joi.string().optional(),
         birthdate: Joi.date().optional(),
-        gender: Joi.string().optional(),
+        gender: Joi.string().optional()
       }
     }),
 

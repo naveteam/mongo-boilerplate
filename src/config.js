@@ -21,6 +21,8 @@ export const LOGGER_NAME = process.env.LOGGER_NAME || 'boilerplate'
 export const REDIS_HOST = process.env.REDIS_HOST || 'localhost'
 export const REDIS_PORT = process.env.REDIS_PORT || 6379
 export const QUEUE_PORT = process.env.QUEUE_PORT || 3001
-export const MONGODB_URL = process.env.MONGODB_URL || 'mongodb://localhost:27017/test?readPreference=primary'
+export const MONGODB_URL =
+  process.env.MONGODB_URL ||
+  'mongodb://localhost:27017/test?readPreference=primary'
 export const MONGODB_PASSWORD = process.env.MONGODB_PASSWORD || ''
 export const MONGODB_USER = process.env.MONGODB_USER || ''

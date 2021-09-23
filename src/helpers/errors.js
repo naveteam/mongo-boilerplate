@@ -70,7 +70,7 @@ export const errorHandling = err => {
       type: 'DuplicateKey',
       data: {
         columns: Object.keys(err.keyPattern),
-        err: err.toString(),
+        err: err.toString()
       },
       statusCode: 400
     }

@@ -9,8 +9,7 @@ const seed = async () => ({
   birthdate: '1988-08-23',
   created_at: new Date(),
   updated_at: new Date(),
-  role: Types.ObjectId("5e606408dc8aec3040688a86")
-
+  role: Types.ObjectId('5e606408dc8aec3040688a86')
 })
 
 module.exports = seed()

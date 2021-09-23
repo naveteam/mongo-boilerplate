@@ -28,10 +28,10 @@ const userSchema = new Schema(
       type: Date,
       required: true
     },
-    role: { type: Schema.Types.ObjectId, ref : 'Roles' }
+    role: { type: Schema.Types.ObjectId, ref: 'Roles' }
   },
   { timestamps: true },
-  { collation: { locale: 'pt', strength: 2 }}
+  { collation: { locale: 'pt', strength: 2 } }
 )
 
 userSchema.plugin(mongoosePaginate)
