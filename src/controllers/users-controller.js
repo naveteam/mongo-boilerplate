@@ -131,7 +131,7 @@ export const update = async ctx => {
 }
 
 export const destroy = async ctx => {
-  const user = await User.findByIdAndDelete(ctx.state.user.id)
+  const user = await User.findByIdAndDelete(ctx.params.id)
   if (!user) {
     throw new NotFound('User not found')
   }
