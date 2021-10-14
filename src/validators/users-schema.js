@@ -41,6 +41,19 @@ const UsersValidate = {
       body: {
         refresh_token: Joi.string().required()
       }
+    }),
+  forget: () =>
+    validationMiddleware({
+      body: {
+        email: Joi.string().email().required()
+      }
+    }),
+  reset: () =>
+    validationMiddleware({
+      body: {
+        token: Joi.string().required(),
+        password: Joi.string().required()
+      }
     })
 }
 
