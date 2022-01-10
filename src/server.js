@@ -11,12 +11,7 @@ const app = new Koa()
 
 app.use(helmet())
 
-const mongooseOptions = {
-  user: MONGODB_USER,
-  pass: MONGODB_PASSWORD
-}
-
-Mongoose.connect(MONGODB_URL, mongooseOptions)
+Mongoose.connect(MONGODB_URL)
 
 app.use(
   Cors({
