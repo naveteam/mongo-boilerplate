@@ -149,14 +149,6 @@ export const refreshToken = ctx => {
   })
 }
 
-export const createUsingQueue = ctx => {
-  const { body } = ctx.request
-
-  userQueue.queue.add(body)
-
-  return { message: 'Job is running' }
-}
-
 export default {
   index,
   create,
@@ -167,6 +159,5 @@ export default {
   show,
   destroy,
   me,
-  refreshToken,
-  createUsingQueue
+  refreshToken
 }
